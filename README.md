@@ -1,11 +1,11 @@
 # Credit Card Risk Analysis
 
 ## Overview
-In this project, I am working on the dataset provided by LendingClub, a peer-to-peer lending services company. The goal of our analysis is to build a machine learning model to classify loans to either risky or not.
+LendingClub, a peer-to-peer lending services company wants to build a machine learning model to classify loans to either risky or not risky.
 
 ![alt text](credit_risk.jpeg)
 
-Since good loans easily outnumber risky loans, the data is imbalanced. That's why this task is a little bit tricky. The imbalanced data forced me to implement some special techniques during both, training the models as well as evaluating them. For the training step, I train `Logistic Regression` model on different Oversampling, and Undersampling Techniques Including:
+Since good loans easily outnumber risky loans, the data is imbalanced. That's why this task is a little bit tricky. The imbalanced data forced me to implement some special techniques during both, training the models as well as evaluating them. For the training step, I trained the `Logistic Regression` model using oversampling, and undersampling techniques:
 <ol>
 <li>  Naive Random Over Sampling </li>
 <li> SMOTE Over Sampling </li>
@@ -13,20 +13,16 @@ Since good loans easily outnumber risky loans, the data is imbalanced. That's wh
 <li> SMOTEEN Combination </li>
 </ol>
 
-In addition, we train another two models using the imbalanced data:
+In addition, we trained another two models using the imbalanced data:
 <ol>
 <li>  Balanced Random Forest </li>
 <li> Easy Ensemble Adaboost Classifier </li>
 </ol>
 
-Moreover, to evaluate the model, we use Balance Accuracy Score, as well as the imbalanced Classification Report.
-
-In the next section we are discussing the obtained results for each of the conducted experiments
+To evaluate the model, we used Balance Accuracy Score, as well as the imbalanced Classification Report.
 
 
 ## Results
-
-In this section we discuss the results found during conducting our analysis.
 
 #### Balanced Accuracy
 
@@ -40,7 +36,11 @@ In this section we discuss the results found during conducting our analysis.
 | LR with SMOTEENN | 64% |
 | Balanced Random Forest |  79%|
 | Easy Ensemble Adaboost | 93% |
-Table 1. The Balanced accuracy obtained with the six experiments
+
+
+Below are the balanced accuracy results obtained with the six experiments
+
+
 #### Imbalanced Classification Report
 In this subsection, the Imbalanced Classification Report for each of the six conducted experiments is reported:
 
@@ -65,4 +65,4 @@ In this subsection, the Imbalanced Classification Report for each of the six con
 
 ## Summary
 
-Oversampling techniques is way better than the undersampling ones and perform nearly the same as the cobination algorithms. However, Balanced RF and Easy Ensemble Adaboost obtained results that surpassed those obtained during using over/under sampling techniques. Despite EE Adaboost takes more inference time, it obtained the highest imbalanced accuracy. That's why EE Adaboost is highly recommended for this task.
+Oversampling techniques is much better than the undersampling ones and perform nearly the same as the combination algorithms. However, Balanced RF and Easy Ensemble Adaboost obtained results that surpassed those obtained during using over/under sampling techniques. Although EE Adaboost takes more inference time, it obtained the highest imbalanced accuracy. That's why EE Adaboost is highly recommended for this task.
